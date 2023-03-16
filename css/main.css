@@ -1,0 +1,729 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #10069F;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #00CFB4;
+}
+
+body {
+  font-family: Proxima Nova;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+
+@media only screen and (max-width: 992px) {
+
+  div.titulo {
+    padding: 100px 40px 0 40px;
+  }
+
+  div.v0_3 {
+    width: 100%;
+    height: 976px;
+  }
+
+  div.v0_7 {
+    top: 475px;
+    width: 100vw;
+    height: 500px;
+  }
+
+  span.titulo-header,
+  span.texto-header,
+  span.subtitulo-header {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  div.v0_170 {
+    flex-direction: column;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+  div.mapas {
+    flex-direction: column;
+  }
+
+  div.v2_3 {
+    height: 400px;
+    flex: none;
+    width: 100%;
+  }
+
+  div.v2_4 {
+    height: 400px;
+    flex: none;
+    width: 100%;
+  }
+
+  div.v2_5 {
+    height: 400px;
+    flex: none;
+    width: 100%;
+  }
+
+  div.v0_170 {
+    flex-direction: column;
+  }
+
+  div.v0_213,
+  div.v0_212 {
+    display: none;
+  }
+
+  div.passos-box {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 1500px) {}
+
+/*header*/
+
+.titulo {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  row-gap: 30px;
+  padding: 220px 40px 0 40px;
+  margin: 0;
+
+}
+
+.v0_2 {
+  width: 100%;
+  background: rgba(255, 255, 255, 1);
+  top: 0px;
+  left: 0px;
+
+}
+
+.v0_3 {
+  width: 100%;
+  height: 786px;
+  background: rgba(255, 255, 255, 1);
+}
+
+.v0_7 {
+  width: 60vw;
+  height: 786px;
+  background: lightgray;
+  /*url("../images/v0_4.png");*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  margin: 0;
+
+}
+
+.titulo-header {
+  width: 471px;
+  color: #000;
+  font-family: Quincy CF;
+  font-weight: Regular;
+  font-size: 64px;
+  text-align: left;
+  z-index: 1;
+}
+
+.texto-header {
+  width: 35vw;
+  color: #000;
+  font-size: 20px;
+  text-align: left;
+  z-index: 1;
+  padding: 0 50px 0 0;
+}
+
+.subtitulo-header {
+  width: 40vw;
+  color: rgba(27, 29, 33, 1);
+  font-size: 22px;
+  text-align: left;
+  z-index: 1;
+}
+
+/*item 1 + mapas*/
+
+.v0_17 {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 50px 50px 50px;
+}
+
+.v2_2 {
+  padding: 80px 0 0 0;
+  color: #000;
+  font-family: Quincy CF;
+  font-weight: Regular;
+  font-size: 80px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.v0_22 {
+  color: #000;
+  font-family: Quincy CF;
+  font-weight: Regular;
+  font-size: 52px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.v0_23 {
+  width: 100%;
+  color: #000;
+  font-family: Proxima Nova;
+  font-weight: Regular;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/*mapas*/
+
+.iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+
+}
+
+.mapas {
+  display: flex;
+  width: 100%;
+  padding: 100px 0 0 0;
+  gap: 10px;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: minmax(100px, 1fr);
+}
+
+.v2_3 {
+  height: 400px;
+  flex: 1 1 0;
+  background: rgba(217, 217, 217, 1);
+}
+
+.v2_4 {
+  height: 400px;
+  flex: 1 1 0;
+  background: rgba(217, 217, 217, 1);
+}
+
+.v2_5 {
+  height: 400px;
+  flex: 1 1 0;
+  background: rgba(217, 217, 217, 1);
+}
+
+/*item 2, 3, 4 e 5*/
+
+.passos-grid {
+  width: 100%;
+  padding: 100px 50px 200px 50px;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.passos-box {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  background: rgba(255, 255, 255, 1);
+  width: 50%;
+  padding: 0 100px 0 100px;
+}
+
+
+.passos-numero {
+  padding: 80px 0 0 0;
+  color: #000;
+  font-family: Quincy CF;
+  font-weight: Regular;
+  font-size: 80px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.passos-texto {
+  width: 100%;
+  color: #000;
+  font-family: Proxima Nova;
+  font-weight: Regular;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.linha-grid-horizontal {
+  width: 1px;
+  height: 1000px;
+  background: rgba(225, 233, 240, 1);
+  position: absolute;
+  padding: 0 0 0 0;
+}
+
+.linha-grid-vertical {
+  width: 80%;
+  height: 1px;
+  background: rgba(225, 233, 240, 1);
+  position: absolute;
+}
+
+
+/*depoimentos*/
+
+
+.depoimentos-section {
+  height: 600px;
+  width: 100%;
+  padding: 0;
+  background: rgba(242, 240, 233, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.grid-depoimentos {
+  width: 100%;
+  height: 360px;
+  position: relative;
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  padding: 50px 50px 0 50px;
+
+}
+
+.box-depoimento {
+  width: 457px;
+  height: 360px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  position: relative;
+}
+
+
+.depoimento {
+  display: flex;
+  width: 30ch;
+  padding: 0 0 0 0;
+  color: #000;
+  position: absolute;
+  top: 110px;
+  left: 40px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.star-area-all {
+  width: 116px;
+  height: 20px;
+  position: absolute;
+  top: 15%;
+  left: 40px;
+}
+
+.star-area-1 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+
+}
+
+.star-1 {
+  width: 17px;
+  height: 16px;
+  color: #FFCE00;
+}
+
+.star-area-2 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  bottom: 20px;
+  left: 24px;
+}
+
+.star-2 {
+  width: 17px;
+  height: 16px;
+  color: #FFCE00;
+}
+
+.star-area-3 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  left: 48px;
+
+}
+
+.v0_72 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+}
+
+.star-3 {
+  width: 17px;
+  height: 16px;
+  color: #FFCE00;
+}
+
+.star-area-4 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  left: 72px;
+
+}
+
+.v0_75 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+}
+
+.star-4 {
+  width: 17px;
+  height: 16px;
+  color: #FFCE00;
+}
+
+.star-area-5 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  left: 96px;
+
+}
+
+.v0_78 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+}
+
+.star-5 {
+  width: 17px;
+  height: 16px;
+  color: #FFCE00;
+}
+
+.pessoa-depoimento {
+  width: 232px;
+  height: 53px;
+  position: absolute;
+  left: 40px;
+  top: 75%;
+}
+
+.v0_81 {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+
+}
+
+
+.v0_82 {
+  width: 48px;
+  height: 48px;
+  background: rgba(215, 215, 215, 1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+
+.v0_84 {
+  width: 115px;
+  color: black;
+  position: absolute;
+  top: 0px;
+  left: 64px;
+  font-family: Quincy CF;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: left;
+}
+
+.v0_85 {
+  width: 168px;
+  color: rgba(141, 142, 144, 1);
+  position: absolute;
+  top: 32px;
+  left: 64px;
+  font-family: Proxima Nova;
+  font-weight: Regular;
+  font-size: 16px;
+  text-align: left;
+}
+
+.v0_86 {
+  width: 457px;
+  height: 360px;
+  position: absolute;
+  top: 0px;
+  left: 487px;
+
+}
+
+
+.v0_105 {
+  width: 232px;
+  height: 53px;
+  position: absolute;
+  top: 267px;
+  left: 40px;
+
+}
+
+.v0_106 {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+
+}
+
+.v0_108 {
+  width: 48px;
+  height: 48px;
+  background: rgba(215, 215, 215, 1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+
+.v0_107 {
+  width: 48px;
+  height: 48px;
+  background: rgba(215, 215, 215, 1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+
+.v0_109 {
+  width: 77px;
+  color: rgba(27, 29, 33, 1);
+  position: absolute;
+  top: 0px;
+  left: 64px;
+  font-family: Quincy CF;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: left;
+}
+
+.v0_110 {
+  width: 168px;
+  color: rgba(141, 142, 144, 1);
+  position: absolute;
+  top: 32px;
+  left: 64px;
+  font-family: Proxima Nova;
+  font-weight: Regular;
+  font-size: 16px;
+  text-align: left;
+}
+
+.v0_111 {
+  width: 457px;
+  height: 360px;
+  position: absolute;
+  top: 0px;
+  left: 974px;
+}
+
+
+.v0_130 {
+  width: 233px;
+  height: 53px;
+  position: absolute;
+  top: 267px;
+  left: 40px;
+
+}
+
+.v0_131 {
+  width: 48px;
+  height: 48px;
+  background: url("../images/v0_131.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+
+}
+
+.v0_133 {
+  width: 48px;
+  height: 48px;
+  background: rgba(215, 215, 215, 1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+
+.v0_132 {
+  width: 48px;
+  height: 48px;
+  background: rgba(215, 215, 215, 1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+
+.v0_134 {
+  width: 168px;
+  color: rgba(27, 29, 33, 1);
+  position: absolute;
+  top: 0px;
+  left: 64px;
+  font-family: Quincy CF;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: left;
+}
+
+.v0_135 {
+  width: 168px;
+  color: rgba(141, 142, 144, 1);
+  position: absolute;
+  top: 32px;
+  left: 64px;
+  font-family: Proxima Nova;
+  font-weight: Regular;
+  font-size: 16px;
+  text-align: left;
+}
+
+.area-titulo-depoimentos {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+  bottom: 240px;
+  left: 50px;
+  padding: 0 0 0 0;
+}
+
+.titulo-depoimentos {
+  width: 339px;
+  color: #000;
+  position: absolute;
+  font-family: Quincy CF;
+  font-weight: Regular;
+  font-size: 52px;
+  text-align: left;
+  left: 0;
+  top: 0;
+}
+
+.texto-titulo-depoimentos {
+  width: 558px;
+  position: absolute;
+  display: flex;
+  color: #000;
+  font-family: Proxima Nova;
+  font-weight: Regular;
+  font-size: 20px;
+  text-align: left;
+  left: 375px;
+}
+
+.footer-section {
+  width: 100%;
+  height: 321px;
+  background: rgba(0, 0, 0, 1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0px;
+  left: 0px;
+
+}
+
+.txt-footer {
+  max-width: 20ch;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  font-family: Quincy CF;
+  font-weight: Regular;
+  font-size: 40px;
+
+}
