@@ -24,6 +24,22 @@ body {
   width: 100%;
 }
 
+@keyframes slide-right {
+
+  0% {
+    right: -100%;
+    opacity: 0;
+  }
+
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+
+}
+
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
@@ -86,7 +102,7 @@ body {
     width: 100%;
   }
 
-  span.passos-texto{
+  span.passos-texto {
     font-size: 18px;
   }
 
@@ -121,35 +137,35 @@ body {
     height: 1500px;
     width: 100%;
   }
-  
+
   div.area-titulo-depoimentos {
     padding: 0 0 70px 0;
   }
-  
+
   span.titulo-depoimentos {
     font-size: 35px;
   }
-  
+
   span.texto-titulo-depoimentos {
     width: 100%;
     font-size: 18px;
     text-align: center;
   }
-  
-  
+
+
   div.grid-depoimentos {
     height: 1200px;
     flex-direction: column;
     padding: 0 20px 0 20px;
-  
+
   }
-  
+
   div.box-depoimento {
     width: 100%;
     height: 600px;
   }
-  
-  
+
+
   span.depoimento {
     width: 26ch;
   }
@@ -159,19 +175,19 @@ body {
     font-size: 35px;
     padding: 40px 20px 40px 20px;
   }
-  
+
   div h2 {
     font-size: 35px;
     padding: 40px 20px 0 20px;
   }
 
-  ul > li {
+  ul>li {
     width: 50px;
     height: 50px;
     padding: 0 0 0 0;
     line-height: 50px;
 
-}
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) 
@@ -314,10 +330,12 @@ body {
 }
 
 .area-header {
+  position: relative;
   width: 100%;
   height: 786px;
   background: rgba(255, 255, 255, 1);
 }
+
 
 .img-header {
   width: 60vw;
@@ -330,6 +348,21 @@ body {
   right: 0;
   top: 0;
   margin: 0;
+  animation: slide-right 1500ms ease-out;
+  animation-delay: 500ms;
+}
+
+@keyframes slide-left-txt-header {
+
+  0% {
+    padding: -500px;
+    opacity: 0;
+  }
+
+  100% {
+    padding: 0;
+    opacity: 1;
+  }
 
 }
 
@@ -341,6 +374,9 @@ body {
   font-size: 64px;
   text-align: left;
   z-index: 1;
+  animation: slide-left-txt-header 1500ms ease-out;
+  animation-delay: 500ms;
+  
 }
 
 .texto-header {
