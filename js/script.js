@@ -1,4 +1,23 @@
-const imgHeader = document.querySelector(".img-header");
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight * 1.4;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 0;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
+// To check the scroll position on page load
+reveal();
+
+/*const imgHeader = document.querySelector(".img-header");
 const tituloHeader = document.querySelector(".titulo-header");
 const subtituloHeader = document.querySelector(".subtitulo-header");
 const textoHeader = document.querySelector(".texto-header");
@@ -39,7 +58,6 @@ let tlMapas = gsap.timeline({
     trigger: mapas.center,
     start: "top+=1 top",
     end: "bottom top+=30%",
-    /*end: ".mapa"[2].bottom,*/
     pin: mapas.top,
     markers: true,
     toggleActions: "play reset restart reset",
@@ -51,28 +69,4 @@ tlMapas.fromTo(
   { y: "100", opacity: "0" },
   { y: "0", opacity: "1", ease: Power2.EaseInOut }
 );
-
-/*
-
-const tl = new TimelineMax();*/
-
-/* const mapas = document.querySelectorAll(".mapa");
-
-window.addEventListener("scroll", showContentY);
-
-showContentY();
-
-function showContentY() {
-  const triggerBottom = (window.innerHeight)*1.25;
-
-  mapas.forEach((mapa) => {
-    const mapaTop = mapa.getBoundingClientRect().top;
-    
-    if (mapaTop < triggerBottom ) {
-      mapa.classList.add("show");
-    } else {
-      mapa.classList.remove("show");
-    }
-  });
-
-}*/
+*/
