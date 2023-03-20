@@ -23,7 +23,7 @@ body {
   margin: 0 auto;
   width: 100%;
 }
-
+/*
 @keyframes slide-right {
 
   0% {
@@ -38,6 +38,25 @@ body {
 
 }
 
+@keyframes slide-left-txt-header {
+
+  0% {
+    left: -500px;
+    opacity: 0;
+  }
+
+  50% {
+    left: -250px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+
+}
+*/
 
 
 /* Extra small devices (phones, 600px and down) */
@@ -348,25 +367,17 @@ body {
   right: 0;
   top: 0;
   margin: 0;
+  -webkit-animation: slide-right 1500ms ease-out;
+  -o-animation: slide-right 1500ms ease-out;
+  -moz-animation: slide-right 1500ms ease-out;
   animation: slide-right 1500ms ease-out;
-  animation-delay: 500ms;
+  animation-delay: 1000ms;
 }
 
-@keyframes slide-left-txt-header {
-
-  0% {
-    padding: -500px;
-    opacity: 0;
-  }
-
-  100% {
-    padding: 0;
-    opacity: 1;
-  }
-
-}
 
 .titulo-header {
+  position: relative;
+  left: 0px;
   width: 471px;
   color: #000;
   font-family: Quincy CF;
@@ -374,26 +385,42 @@ body {
   font-size: 64px;
   text-align: left;
   z-index: 1;
+  -webkit-animation: slide-left-txt-header 1500ms ease-out;
+  -o-animation: slide-left-txt-header 1500ms ease-out;
+  -moz-animation: slide-left-txt-header 1500ms ease-out;
   animation: slide-left-txt-header 1500ms ease-out;
-  animation-delay: 500ms;
-  
+  animation-delay: 1000ms;
 }
 
 .texto-header {
+  position: relative;
+  left: 0;
   width: 35vw;
   color: #000;
   font-size: 20px;
   text-align: left;
   z-index: 1;
   padding: 0 50px 0 0;
+  -webkit-animation: slide-left-txt-header 1500ms ease-out;
+  -o-animation: slide-left-txt-header 1500ms ease-out;
+  -moz-animation: slide-left-txt-header 1500ms ease-out;
+  animation: slide-left-txt-header 1500ms ease-out;
+  animation-delay: 1200ms;
 }
 
 .subtitulo-header {
+  position: relative;
+  left: 0;
   width: 40vw;
   color: rgba(27, 29, 33, 1);
   font-size: 22px;
   text-align: left;
   z-index: 1;
+  -webkit-animation: slide-left-txt-header 1500ms ease-out;
+  -o-animation: slide-left-txt-header 1500ms ease-out;
+  -moz-animation: slide-left-txt-header 1500ms ease-out;
+  animation: slide-left-txt-header 1500ms ease-out;
+  animation-delay: 500ms;
 }
 
 /*item 1 + mapas*/
@@ -445,6 +472,24 @@ body {
 .mapa {
   height: 400px;
   flex: 1 1 0;
+  /*transform: translateY(100%);
+  transition: transform 750ms ease;*/
+}
+
+.mapa:nth-child(1) {
+  order: 1;
+}
+
+.mapa:nth-child(2) {
+  order: 2;
+}
+
+.mapa:nth-child(3) {
+  order: 3;
+}
+
+.mapa.show {
+  transform: translateY(0%);
 }
 
 /*item 2, 3, 4 e 5*/
